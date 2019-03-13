@@ -79,8 +79,8 @@ G4bool AL3ScintSD::ProcessHits(G4Step* aStep,
   AL3ScintHit* newHit = new AL3ScintHit();
 
   newHit->SetTrackID  (aStep->GetTrack()->GetTrackID());
-  newHit->SetChamberNb(aStep->GetPreStepPoint()->GetTouchableHandle()
-                                               ->GetCopyNumber());
+  //newHit->SetChamberNb(aStep->GetPreStepPoint()->GetTouchableHandle()
+                                              // ->GetCopyNumber());
   newHit->SetEdep(edep);
   newHit->SetPos (aStep->GetPostStepPoint()->GetPosition());
 

@@ -52,11 +52,11 @@ AL3PrimaryGeneratorAction::AL3PrimaryGeneratorAction()
   // default particle kinematic
 
   G4ParticleDefinition* particleDefinition 
-    = G4ParticleTable::GetParticleTable()->FindParticle("proton");
+    = G4ParticleTable::GetParticleTable()->FindParticle("mu-");
 
   fParticleGun->SetParticleDefinition(particleDefinition);
-  fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0.,0.,1.));
-  fParticleGun->SetParticleEnergy(3.0*GeV);
+  fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0.,0.,-1.));
+  fParticleGun->SetParticleEnergy(1.0*GeV);
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -70,7 +70,7 @@ AL3PrimaryGeneratorAction::~AL3PrimaryGeneratorAction()
 
 void AL3PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
-  // This function is called at the begining of event
+  /* This function is called at the begining of event
 
   // In order to avoid dependence of PrimaryGeneratorAction
   // on DetectorConstruction class we get world volume
@@ -86,9 +86,9 @@ void AL3PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
     G4cerr << "World volume of box not found." << G4endl;
     G4cerr << "Perhaps you have changed geometry." << G4endl;
     G4cerr << "The gun will be place in the center." << G4endl;
-  }
+  } */
 
-  fParticleGun->SetParticlePosition(G4ThreeVector(0., 0., -worldZHalfLength));
+  fParticleGun->SetParticlePosition(G4ThreeVector(0.*cm, 0.*cm, 4.5*cm));
 
   fParticleGun->GeneratePrimaryVertex(anEvent);
 }

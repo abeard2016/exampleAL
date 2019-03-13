@@ -43,7 +43,7 @@ target_link_libraries(exampleAL3 ${Geant4_LIBRARIES})
 # build B2a. This is so that we can run the executable directly because it
 # relies on these scripts being in the current working directory.
 #
-set(EXAMPLEB2A_SCRIPTS
+set(EXAMPLEAL3_SCRIPTS
   gui.mac
   init_vis.mac
   vis.mac

@@ -44,7 +44,7 @@ G4ThreadLocal G4Allocator<AL3ScintHit>* AL3ScintHitAllocator=0;
 AL3ScintHit::AL3ScintHit()
  : G4VHit(),
    fTrackID(-1),
-   fChamberNb(-1),
+   //fChamberNb(-1),
    fEdep(0.),
    fPos(G4ThreeVector())
 {}
@@ -59,7 +59,7 @@ AL3ScintHit::AL3ScintHit(const AL3ScintHit& right)
   : G4VHit()
 {
   fTrackID   = right.fTrackID;
-  fChamberNb = right.fChamberNb;
+  //fChamberNb = right.fChamberNb;
   fEdep      = right.fEdep;
   fPos       = right.fPos;
 }
@@ -69,7 +69,7 @@ AL3ScintHit::AL3ScintHit(const AL3ScintHit& right)
 const AL3ScintHit& AL3ScintHit::operator=(const AL3ScintHit& right)
 {
   fTrackID   = right.fTrackID;
-  fChamberNb = right.fChamberNb;
+  //fChamberNb = right.fChamberNb;
   fEdep      = right.fEdep;
   fPos       = right.fPos;
 
@@ -83,7 +83,7 @@ G4int AL3ScintHit::operator==(const AL3ScintHit& right) const
   return ( this == &right ) ? 1 : 0;
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+/*....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void AL3ScintHit::Draw()
 {
@@ -100,7 +100,7 @@ void AL3ScintHit::Draw()
   }
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void AL3ScintHit::Print()
 {
@@ -113,4 +113,4 @@ void AL3ScintHit::Print()
      << G4endl;
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......*/
