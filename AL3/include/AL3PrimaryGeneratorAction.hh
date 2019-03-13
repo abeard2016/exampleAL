@@ -39,7 +39,7 @@ class G4Event;
 
 /// The primary generator action class with particle gun.
 ///
-/// It defines a single particle which hits the Tracker 
+/// It defines a single particle which hits the SiPM 
 /// perpendicular to the input face. The type of the particle
 /// can be changed via the G4 build-in commands of G4ParticleGun class 
 /// (see the macros provided with this example).
